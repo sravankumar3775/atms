@@ -6,7 +6,7 @@ import (
 
 type Account interface {
 	GetUserAccounts() ([]models.Account, error)
-	GetUserWithIDAccount() (models.Account, error)
+	GetUserAccountByName() (models.Account, error)
 	CreateUserAccount() error
 	UpdateUserAccount() error
 	DeleteUserAccount() error

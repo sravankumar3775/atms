@@ -31,7 +31,7 @@ func GetUserAccounts(db *sql.DB) ([]models.Account, error) {
 	return accounts, nil
 }
 
-func GetUserWithIDAccount(db *sql.DB, username string) (models.Account, error) {
+func GetUserAccountByName(db *sql.DB, username string) (models.Account, error) {
 	rows := db.QueryRow("SELECT account_id, username, status FROM user_account WHERE username = ? ", username)
 
 	var account models.Account

@@ -17,14 +17,21 @@ func RegisterAccountHandlers() {
 	router := mux.NewRouter()
 	router.HandleFunc("/api/users/get", getUsersHandler).Methods(http.MethodGet)
 	router.HandleFunc("/api/users/create", createUsersHandler).Methods(http.MethodPost)
-	router.HandleFunc("/api/users/{userID}/get", getUserWithIDHandler).Methods(http.MethodGet)
+	router.HandleFunc("/api/users/{username}/get", getUserByNameHandler).Methods(http.MethodGet)
 	router.HandleFunc("/api/users/{userID}/update", updateUsersHandler).Methods(http.MethodPut)
 	router.HandleFunc("/api/users/{userID}/delete", deleteUsersHandler).Methods(http.MethodDelete)
 	router.HandleFunc("/api/login", userLoginHandler).Methods(http.MethodGet)
+	// router.HandleFunc("/api/login", userLoginHandler).Methods(http.MethodGet)
 	log.Fatal(http.ListenAndServe("localhost:1234", router))
 }
 
 func getUsersHandler(w http.ResponseWriter, r *http.Request) {
+
+	authErr := Authenticate(r)
+	if authErr != nil {
+		panic("error authenticating user")
+	}
+
 	accounts, err := ds.GetUserAccounts(dbds)
 	if err != nil {
 		fmt.Println("err")
@@ -35,8 +42,19 @@ func getUsersHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(accounts)
 }
 
-func getUserWithIDHandler(w http.ResponseWriter, r *http.Request) {
-	accounts, err := ds.GetUserAccounts(dbds)
+func getUserByNameHandler(w http.ResponseWriter, r *http.Request) {
+
+	authErr := Authenticate(r)
+	if authErr != nil {
+		panic("error authenticating user")
+	}
+
+	user, ok := mux.Vars(r)["username"]
+	if !ok {
+		panic("error missing user id from the request ")
+	}
+
+	accounts, err := ds.GetUserAccountByName(dbds, user)
 	if err != nil {
 		fmt.Println("err")
 		panic(err.Error())

@@ -1,0 +1,29 @@
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','SFO','SEA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','SEA','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','SFO','SEA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','SEA','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','SFO','SEA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','SEA','SFO');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','SFO','TPA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','TPA','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','SFO','TPA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','TPA','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','SFO','TPA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','TPA','SFO');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','SFO','DCA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','DCA','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','SFO','DCA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','DCA','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','SFO','DCA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','DCA','SFO');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','SFO','IAD');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','IAD','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','SFO','IAD');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','IAD','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','SFO','IAD');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','IAD','SFO');
+
+

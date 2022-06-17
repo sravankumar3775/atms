@@ -1,0 +1,85 @@
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','EWR');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','EWR','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','EWR');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','EWR','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','EWR');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','EWR','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','MCO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','MCO','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','MCO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','MCO','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','MCO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','MCO','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','PHL');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','PHL','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','PHL');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','PHL','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','PHL');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','PHL','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','PHX');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','PHX','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','PHX');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','PHX','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','PHX');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','PHX','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','PDX');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','PDX','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','PDX');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','PDX','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','PDX');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','PDX','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','SLC');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','SLC','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','SLC');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','SLC','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','SLC');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','SLC','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','SAN');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','SAN','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','SAN');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','SAN','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','SAN');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','SAN','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','SFO','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','SFO','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','SFO');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','SFO','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','SEA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','SEA','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','SEA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','SEA','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','SEA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','SEA','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','TPA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','TPA','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','TPA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','TPA','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','TPA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','TPA','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','DCA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','DCA','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','DCA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','DCA','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','DCA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','DCA','LGA');
+
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','LGA','IAD');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('AA','IAD','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','LGA','IAD');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('DL','IAD','LGA');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','LGA','IAD');
+INSERT INTO `atms_temp_schema`.`flight`(`airline_code`,`area_from`,`area_to`)VALUES('UN','IAD','LGA');
+
+

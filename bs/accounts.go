@@ -3,8 +3,8 @@ package bs
 import (
 	"atms/ds"
 	"atms/models"
+	"database/sql"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -29,13 +29,14 @@ func getUsersHandler(w http.ResponseWriter, r *http.Request) {
 
 	authErr := Authenticate(r)
 	if authErr != nil {
-		panic("error authenticating user")
+		w.WriteHeader(http.StatusUnauthorized)
+		return
 	}
 
 	accounts, err := ds.GetUserAccounts(dbds)
 	if err != nil {
-		fmt.Println("err")
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	w.Header().Set("Content-Type", "application/json")
@@ -46,47 +47,58 @@ func getUserByNameHandler(w http.ResponseWriter, r *http.Request) {
 
 	authErr := Authenticate(r)
 	if authErr != nil {
-		panic("error authenticating user")
+		w.WriteHeader(http.StatusUnauthorized)
+		return
 	}
 
 	user, ok := mux.Vars(r)["username"]
 	if !ok {
-		panic("error missing user id from the request ")
+		w.WriteHeader(http.StatusBadRequest)
+		return
 	}
 
 	accounts, err := ds.GetUserAccountByName(dbds, user)
 	if err != nil {
-		fmt.Println("err")
-		panic(err.Error())
+		if err == sql.ErrNoRows {
+			w.WriteHeader(http.StatusNotFound)
+			return
+		}
+		log.Fatal(err)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
+	accByte, _ := json.Marshal(accounts)
+
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(accounts)
+	w.Write(accByte)
 }
 
 func createUsersHandler(w http.ResponseWriter, r *http.Request) {
 
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	userPayload := models.Account{}
 	err = json.Unmarshal(body, &userPayload)
 	if err != nil {
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	err = ds.CreateUserAccount(dbds, userPayload)
 	if err != nil {
-		fmt.Println("err")
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	accounts, err := ds.GetUserAccounts(dbds)
 	if err != nil {
-		fmt.Println("err")
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	w.Header().Set("Content-Type", "application/json")
@@ -96,34 +108,38 @@ func createUsersHandler(w http.ResponseWriter, r *http.Request) {
 func updateUsersHandler(w http.ResponseWriter, r *http.Request) {
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	userID, ok := mux.Vars(r)["userID"]
 	if !ok {
-		panic("error converting user id")
+		w.WriteHeader(http.StatusBadRequest)
+		return
 	}
 
 	convUserID, err := strconv.Atoi(userID)
 	if err != nil {
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 	userPayload := models.Account{}
 	err = json.Unmarshal(body, &userPayload)
 	if err != nil {
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	err = ds.UpdateUserAccount(dbds, convUserID, userPayload)
 	if err != nil {
-		fmt.Println("err")
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	accounts, err := ds.GetUserAccounts(dbds)
 	if err != nil {
-		fmt.Println("err")
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	w.Header().Set("Content-Type", "application/json")
@@ -134,24 +150,26 @@ func deleteUsersHandler(w http.ResponseWriter, r *http.Request) {
 
 	userID, ok := mux.Vars(r)["userID"]
 	if !ok {
-		panic("error converting userid")
+		w.WriteHeader(http.StatusBadRequest)
+		return
 	}
 
 	convUserID, err := strconv.Atoi(userID)
 	if err != nil {
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	err = ds.DeleteUserAccount(dbds, convUserID)
 	if err != nil {
-		fmt.Println("err")
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	accounts, err := ds.GetUserAccounts(dbds)
 	if err != nil {
-		fmt.Println("err")
-		panic(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 
 	w.Header().Set("Content-Type", "application/json")

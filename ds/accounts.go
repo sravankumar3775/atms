@@ -37,7 +37,10 @@ func GetUserAccountByName(db *sql.DB, username string) (models.Account, error) {
 	var account models.Account
 	err := rows.Scan(&account.AccountID, &account.UserName, &account.Status)
 	if err != nil {
-		panic(err.Error())
+		if err == sql.ErrNoRows {
+			return account, sql.ErrNoRows
+		}
+		return account, err
 	}
 
 	return account, nil
